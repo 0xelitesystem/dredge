@@ -1,0 +1,5 @@
+gradio==5.49.0
+httpx>=0.25
+typer>=0.9
+rich>=13.0
+python-dotenv>=1.0

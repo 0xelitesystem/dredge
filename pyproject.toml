@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dredge"
+version = "0.1.0"
+description = "Surface what search engines bury. An OSINT toolkit for finding suppressed public records, deleted content, and adversarially-buried search results."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "dredge contributors" }]
+keywords = ["osint", "search", "investigation", "due-diligence", "research"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+]
+dependencies = [
+    "httpx>=0.25",
+    "typer>=0.9",
+    "rich>=13.0",
+    "python-dotenv>=1.0",
+]
+
+[project.scripts]
+dredge = "dredge.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/0xelitesystem/dredge"
+Issues = "https://github.com/0xelitesystem/dredge/issues"
+
+[tool.setuptools.packages.find]
+include = ["dredge*"]
