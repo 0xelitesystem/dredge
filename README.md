@@ -8,7 +8,7 @@ sdk_version: 5.49.0
 app_file: app.py
 pinned: false
 license: mit
-short_description: Surface what search engines bury — OSINT for suppressed records.
+short_description: OSINT toolkit for finding what search engines bury.
 ---
 
 # dredge
