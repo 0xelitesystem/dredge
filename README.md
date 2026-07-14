@@ -21,13 +21,13 @@ An OSINT toolkit for finding suppressed public records, deleted content, and adv
 
 Most due-diligence searches stop at the first page of Google, which is exactly what reputation-management firms pay for. Negative coverage is pushed to page 5+. Tweets and posts get deleted. Court records sit in indexes nobody queries. The loudest paid signal usually outranks the truthful one.
 
-dredge runs adversarial queries in parallel across sources that resist suppression: deep search-engine paging with negative-keyword expansion, the Wayback Machine for deleted content, and court-record APIs for litigation history. Each source is a plugin — three ship today, more are planned.
+dredge runs adversarial queries in parallel across sources that resist suppression: deep search-engine paging with negative-keyword expansion, the Wayback Machine for deleted content, and court-record APIs for litigation history. Each source is a plugin, three ship today, more are planned.
 
 ## Try it
 
 A hosted version runs on Hugging Face Spaces: **[huggingface.co/spaces/0xelitesystem/dredge](https://huggingface.co/spaces/0xelitesystem/dredge)**
 
-Bring your own keys. Nothing is stored. For full control and unlimited use, run it locally — see below.
+Bring your own keys. Nothing is stored. For full control and unlimited use, run it locally, see below.
 
 ## Modules
 
@@ -141,17 +141,17 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide.
 
 Planned modules, ordered by impact:
 
-- **reddit_deep** — Reddit including deleted posts and comments via Pullpush
-- **sec_edgar** — SEC filings and enforcement actions
-- **ftc_actions** — FTC consumer-protection cases
-- **finra_brokercheck** — Securities-industry disciplinary records
-- **state_ag** — State Attorney General consent decrees
-- **whois_history** — Domain ownership history (SecurityTrails / WhoisXML)
-- **etherscan** — On-chain activity for known wallets
-- **arkham** — Wallet clustering and labels
-- **youtube_transcripts** — Whisper-indexed coverage by investigative channels
-- **sherlock** — Username sweep across platforms
-- **tos_dr** — Terms-of-Service violations and complaints
+- **reddit_deep**, Reddit including deleted posts and comments via Pullpush
+- **sec_edgar**, SEC filings and enforcement actions
+- **ftc_actions**, FTC consumer-protection cases
+- **finra_brokercheck**, Securities-industry disciplinary records
+- **state_ag**, State Attorney General consent decrees
+- **whois_history**, Domain ownership history (SecurityTrails / WhoisXML)
+- **etherscan**, On-chain activity for known wallets
+- **arkham**, Wallet clustering and labels
+- **youtube_transcripts**, Whisper-indexed coverage by investigative channels
+- **sherlock**, Username sweep across platforms
+- **tos_dr**, Terms-of-Service violations and complaints
 
 Want to write one? See [CONTRIBUTING.md](CONTRIBUTING.md).
 
