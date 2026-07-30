@@ -6,7 +6,7 @@ results that reputation-management firms typically push off
 page one: complaint forums, court records, deleted reviews.
 
 Clusters are configurable per investigation. Defaults are
-conservative — enable more clusters for deeper sweeps.
+conservative. Enable more clusters for deeper sweeps.
 """
 
 KEYWORD_CLUSTERS: dict[str, list[str]] = {
@@ -82,7 +82,7 @@ def build_queries(
 
     queries: list[str] = []
 
-    # Cluster sweeps — one query per cluster, OR-joined terms.
+    # Cluster sweeps: one query per cluster, OR-joined terms.
     for cluster in clusters:
         terms = KEYWORD_CLUSTERS.get(cluster, [])
         if not terms:

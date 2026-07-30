@@ -2,7 +2,7 @@
 
 Hugging Face Spaces entry point. Wraps the same Runner / Investigator
 pipeline used by the CLI. Keys are taken from the user via password
-fields and passed in as a per-request config dict — never stored,
+fields and passed in as a per-request config dict. Never stored,
 never logged.
 """
 
