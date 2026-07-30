@@ -58,7 +58,7 @@ def render(result: InvestigationResult) -> str:
         out.append("")
         ordered = sorted(items, key=lambda x: x.timestamp or _DT_MIN, reverse=True)
         for f in ordered:
-            ts = f.timestamp.strftime("%Y-%m-%d") if f.timestamp else "—"
+            ts = f.timestamp.strftime("%Y-%m-%d") if f.timestamp else "undated"
             title = f.title or "(untitled)"
             if f.url:
                 out.append(f"### [{title}]({f.url})")
