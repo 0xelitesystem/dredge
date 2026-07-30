@@ -162,6 +162,10 @@ Want to write one? See [CONTRIBUTING.md](CONTRIBUTING.md).
 - This tool can be misused. Don't use it to harass, dox, or stalk private individuals. Doing so is wrong and probably illegal where you live.
 - The maintainers do not vouch for any specific finding produced by this software.
 
+## More
+
+Part of a catalog of single-file browser tools and plain-language references, all MIT licensed and dependency-free: [0xelitesystem.github.io](https://0xelitesystem.github.io/). Built by [elitesystem.ai](https://elitesystem.ai).
+
 ## License
 
 MIT. Use it, fork it, build on it. Attribution appreciated, not required.
