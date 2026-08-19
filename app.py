@@ -184,7 +184,7 @@ with gr.Blocks(
                 placeholder="Higher rate limits if provided",
             )
             gr.Markdown(
-                "[Get a SerpAPI key](https://serpapi.com)  -  "
+                "[Get a SerpAPI key](https://serpapi.com) · "
                 "[Get a CourtListener token](https://www.courtlistener.com/help/api/rest/)",
             )
 
