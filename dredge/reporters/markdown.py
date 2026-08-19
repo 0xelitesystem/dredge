@@ -64,7 +64,7 @@ def render(result: InvestigationResult) -> str:
                 out.append(f"### [{title}]({f.url})")
             else:
                 out.append(f"### {title}")
-            out.append(f"`{ts}` · `{f.investigator}`")
+            out.append(f"`{ts}`  -  `{f.investigator}`")
             out.append("")
             if f.snippet:
                 out.append(f.snippet)
