@@ -9,7 +9,7 @@ description = "Surface what search engines bury. An OSINT toolkit for finding su
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
-authors = [{ name = "dredge contributors" }]
+authors = [{ name = "0xelitesystem" }]
 keywords = ["osint", "search", "investigation", "due-diligence", "research"]
 classifiers = [
     "Development Status :: 3 - Alpha",

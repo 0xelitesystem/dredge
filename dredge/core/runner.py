@@ -3,9 +3,11 @@ from datetime import datetime, timezone
 from typing import Iterable
 
 from rich.console import Console
+from rich.markup import escape
 
 from .investigator import Investigator
 from .models import InvestigationResult, Target
+from .sanitize import terminal_safe
 
 
 class Runner:
@@ -40,7 +42,9 @@ class Runner:
             except Exception as e:
                 msg = f"{type(e).__name__}: {e}"
                 result.add_error(inv.name, msg)
-                self.console.print(f"  [red]err[/red] {inv.name}: {msg}")
+                self.console.print(
+                    f"  [red]err[/red] {inv.name}: {escape(terminal_safe(msg))}"
+                )
 
         await asyncio.gather(*[run_one(inv) for inv in applicable])
 

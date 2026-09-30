@@ -2,3 +2,11 @@
 Thumbs.db
 *.log
 node_modules/
+
+# Local secrets and environments (README Install creates these in the clone)
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.pyc
