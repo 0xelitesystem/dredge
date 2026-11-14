@@ -3,8 +3,8 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "dredge"
-version = "0.1.0"
+name = "siltscan"
+version = "0.2.0"
 description = "Surface what search engines bury. An OSINT toolkit for finding suppressed public records, deleted content, and adversarially-buried search results."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -29,11 +29,12 @@ dependencies = [
 ]
 
 [project.scripts]
-dredge = "dredge.cli:main"
+siltscan = "siltscan.cli:main"
+dredge = "siltscan.cli:deprecated_main"
 
 [project.urls]
-Homepage = "https://github.com/0xelitesystem/dredge"
-Issues = "https://github.com/0xelitesystem/dredge/issues"
+Homepage = "https://github.com/0xelitesystem/siltscan"
+Issues = "https://github.com/0xelitesystem/siltscan/issues"
 
 [tool.setuptools.packages.find]
-include = ["dredge*"]
+include = ["siltscan*"]

@@ -6,11 +6,11 @@ Run from project root: python tests/smoke.py
 import asyncio
 from datetime import datetime, timedelta, timezone
 
-from dredge.core.investigator import Investigator
-from dredge.core.keywords import build_queries
-from dredge.core.models import Finding, InvestigationResult, SourceType, Target, TargetType
-from dredge.core.runner import Runner
-from dredge.reporters.markdown import render
+from siltscan.core.investigator import Investigator
+from siltscan.core.keywords import build_queries
+from siltscan.core.models import Finding, InvestigationResult, SourceType, Target, TargetType
+from siltscan.core.runner import Runner
+from siltscan.reporters.markdown import render
 
 
 class FakeInvestigator(Investigator):

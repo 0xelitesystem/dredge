@@ -239,5 +239,12 @@ def main():
     app()
 
 
+def deprecated_main():
+    """The old `dredge` command. Kept for one release, then removed."""
+    import sys as _sys
+    print("`dredge` is now `siltscan`. The old command goes away in the next release.", file=_sys.stderr)
+    return main()
+
+
 if __name__ == "__main__":
     main()

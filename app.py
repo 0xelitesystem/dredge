@@ -1,4 +1,4 @@
-"""dredge web interface.
+"""siltscan web interface.
 
 Hugging Face Spaces entry point. Wraps the same Runner / Investigator
 pipeline used by the CLI. Keys are taken from the user via password
@@ -12,12 +12,12 @@ from datetime import datetime, timezone
 
 import gradio as gr
 
-from dredge.core.models import Target, TargetType
-from dredge.core.runner import Runner
-from dredge.investigators.courtlistener import CourtListenerInvestigator
-from dredge.investigators.google_dork import GoogleDorkInvestigator
-from dredge.investigators.wayback import WaybackInvestigator
-from dredge.reporters.markdown import render as render_markdown
+from siltscan.core.models import Target, TargetType
+from siltscan.core.runner import Runner
+from siltscan.investigators.courtlistener import CourtListenerInvestigator
+from siltscan.investigators.google_dork import GoogleDorkInvestigator
+from siltscan.investigators.wayback import WaybackInvestigator
+from siltscan.reporters.markdown import render as render_markdown
 
 
 REGISTRY = {
@@ -28,11 +28,11 @@ REGISTRY = {
 
 
 HEADER = """
-# dredge
+# siltscan
 
 Surface what search engines bury. An OSINT toolkit for finding suppressed public records, deleted content, and adversarially-buried search results.
 
-**Bring your own keys.** Nothing is stored on this server. Each investigation runs with the keys you provide and is discarded when the page closes. For full control, [run it locally](https://github.com/0xelitesystem/dredge).
+**Bring your own keys.** Nothing is stored on this server. Each investigation runs with the keys you provide and is discarded when the page closes. For full control, [run it locally](https://github.com/0xelitesystem/siltscan).
 """
 
 DISCLAIMER = """
@@ -121,7 +121,7 @@ def investigate(
 
 
 with gr.Blocks(
-    title="dredge",
+    title="siltscan",
     theme=gr.themes.Base(
         primary_hue="slate",
         neutral_hue="slate",

@@ -17,11 +17,11 @@ import pytest
 from rich.console import Console
 from typer.testing import CliRunner
 
-from dredge import cli
-from dredge.core.investigator import Investigator
-from dredge.core.models import Finding, InvestigationResult, SourceType, Target, TargetType
-from dredge.core.runner import Runner
-from dredge.reporters.markdown import render
+from siltscan import cli
+from siltscan.core.investigator import Investigator
+from siltscan.core.models import Finding, InvestigationResult, SourceType, Target, TargetType
+from siltscan.core.runner import Runner
+from siltscan.reporters.markdown import render
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
@@ -316,7 +316,7 @@ def test_only_regular_files_and_new_paths_get_the_atomic_write(tmp_path):
     "NUL", "nul", "Nul.md", "nul.tar.gz", "NUL ", "NUL.", "NUL:", "con", "PRN.txt", "aux",
     "COM1", "com9.log", "LPT0", "COM\u00b9", "lpt\u00b3.md", "CONIN$", "conout$",
     "C:\\reports\\NUL", "C:NUL", "reports/nul.md",
-    "\\\\.\\NUL", "\\\\.\\COM12", "\\\\.\\pipe\\dredge", "//./pipe/dredge",
+    "\\\\.\\NUL", "\\\\.\\COM12", "\\\\.\\pipe\\siltscan", "//./pipe/siltscan",
 ])
 def test_windows_device_names_are_recognized(name):
     assert cli._is_windows_device_name(name)
@@ -404,7 +404,7 @@ def _git_ignored(path):
 def test_gitignore_covers_env_and_venv():
     if not shutil.which("git") or not (REPO_ROOT / ".git").exists():
         pytest.skip("not a git checkout")
-    for path in (".env", ".env.local", ".venv/pyvenv.cfg", "dredge/__pycache__/cli.cpython-312.pyc"):
+    for path in (".env", ".env.local", ".venv/pyvenv.cfg", "siltscan/__pycache__/cli.cpython-312.pyc"):
         assert _git_ignored(path), path
     assert not _git_ignored(".env.example")
     assert (REPO_ROOT / ".env.example").is_file()

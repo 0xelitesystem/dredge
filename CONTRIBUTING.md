@@ -1,17 +1,17 @@
 # Contributing
 
-dredge is built around one core abstraction: the `Investigator`. Every data source, search engines, court archives, regulatory databases, on-chain data, social platforms, is a subclass that implements one async method.
+siltscan is built around one core abstraction: the `Investigator`. Every data source, search engines, court archives, regulatory databases, on-chain data, social platforms, is a subclass that implements one async method.
 
 ## Adding an investigator
 
-1. Create `dredge/investigators/your_source.py`
+1. Create `siltscan/investigators/your_source.py`
 2. Subclass `Investigator`. Set:
    - `name`, short identifier used on the CLI (e.g. `sec_edgar`)
    - `description`, one-line description
    - `requires_keys`, list of env-var names this module needs (empty list if none)
    - `supports_types`, which target types make sense (`person`, `company`, `domain`, `wallet`)
 3. Implement `async investigate(self, target: Target) -> list[Finding]`
-4. Register the class in `REGISTRY` in `dredge/cli.py`
+4. Register the class in `REGISTRY` in `siltscan/cli.py`
 5. Update `.env.example` if new env vars were added
 6. Open a PR with at least one example output saved under `examples/`
 
